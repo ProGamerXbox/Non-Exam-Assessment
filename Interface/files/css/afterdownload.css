@@ -1,0 +1,14 @@
+@import url('csskit/starsbackground.css');
+
+/**/
+
+.tubougepas{
+    font-family: 'Anonymous Pro', monospace;
+    color: white;
+    transform: translate(-50%, -50%);
+    top: 200px;
+    left: 50%;
+    display: block;
+    position: absolute;
+    text-align: center;
+}

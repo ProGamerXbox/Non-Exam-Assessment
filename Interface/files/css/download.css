@@ -1,0 +1,116 @@
+@import url('csskit/navbar.css');
+@import url('csskit/starsbackground.css');
+@import url('csskit/typewriter.css');
+
+.page {
+    width: 1200px;
+    padding: 2rem 0;
+    height: auto;
+    margin: auto;
+}
+
+/*typewriter*/
+
+.tubougepas {
+    transform: translate(-50%, -50%);
+    top: 200px;
+    left: 50%;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.line-1 {
+    font-size: 80px; 
+}
+
+
+/*Download button*/
+
+.btn-2 {
+    top: 200px;
+    position: relative;
+    background: #F98909;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 320px;
+    /*  font-size: 20px;
+        top: 100px;*/
+}
+
+.btn-2:hover {
+    background: #DC6C11;
+}
+
+p.downloadtext {
+    color: #888;
+    padding: 15px;
+}
+
+/*Footer*/
+
+footer{
+    text-align: center;
+    position: relative;
+    color: white;
+    top: calc(100% - 75px);
+}
+
+a.downloadwinrar, a.download7zip{
+    color: blue;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+/*Screens Resolutions*/
+
+/*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
+@media screen and (min-width: 1024px) {
+    .btn-2 {
+        top: 200px;
+    }
+}
+
+/*###Tablet(medium)###*/
+@media screen and (min-width : 768px) and (max-width : 1023px) {
+    a.btn-2 {
+
+        top: 200px;
+    }
+}
+
+/*### Smartphones (portrait and landscape)(small)### */
+@media screen and (min-width : 361px) and (max-width : 767px) {
+    .btn-2 {
+        top: 200px;
+    }
+
+    .line-1 {
+        font-size: 60px;
+    }
+
+    .tubougepas{
+        top: 175px;
+    }
+}
+
+@media screen and (min-width : 0px) and (max-width : 360px) {
+    .btn-2 {
+        top: 200px;
+        width: calc(100% - 20px);
+    }
+
+    .line-1 {
+        font-size: 60px;
+    }
+
+    .tubougepas{
+        top: 175px;
+    }
+}
