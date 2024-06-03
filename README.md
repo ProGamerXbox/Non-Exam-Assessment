@@ -1,4 +1,4 @@
-# 🔰 Non-Exam-Assessment :
+# ✨ Non-Exam-Assessment	✨ :
 
 # 💠 Introduction :
 
@@ -8,9 +8,10 @@
         * photos
         * messages
     * types of chats :
+        * global
         * private
         * group
-        * server (if possible)
+        * private servers (big groups)(if possible)
     * calls (highly doubt it due to its difficulty to implement)
 
 ## 🤔 Why ? :
@@ -21,7 +22,9 @@
 
 - **Security :**
     - some chat applications may use **weak encryption method**, which would result in data being able to be **intercepted**
-    
+
+- **Personal reasons :**
+    - it's fun and I always wanted to try to create a chat application
 ---
 
 # ⚙️ Plan:
@@ -35,4 +38,4 @@
 
 # interface :
 
-# Code
+# 💻 Code :
