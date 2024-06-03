@@ -11,16 +11,17 @@
         * private
         * group
         * server (if possible)
+    * calls (highly doubt it due to its difficulty to implement)
 
 ## 🤔 Why ? :
 
 - **Privacy :**
-    - nowdays most of chat applications **steal personal data/informations**
-    - most of the private conversations are not really 'private'
+    - nowdays most of big companies chat applications **steal personal data/informations**
+    - most of the private conversations are not really 'private', they are kept and logged by big companies 
 
 - **Security :**
-    - all information/data sent to anyone will be **encrypted** using a **strong encryption method**
-
+    - some chat applications may use **weak encryption method**, which would result in data being able to be **intercepted**
+    
 ---
 
 # ⚙️ Plan:
@@ -28,4 +29,10 @@
 * Interface :
     - web browser
 
+---
+
 # 🚧 Progress :
+
+# interface :
+
+# Code
