@@ -12,7 +12,7 @@
         * group
         * server (if possible)
 
-## Why ? :
+## 🤔 Why ? :
 
 - **Privacy :**
     - nowdays most of chat applications **steal personal data/informations**
