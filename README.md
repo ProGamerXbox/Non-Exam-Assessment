@@ -5,11 +5,12 @@
 
 - [🔰 Non-Exam-Assessment :](#-non-exam-assessment-)
 - [1. 💠 Introduction :](#1--introduction-)
-  - [1.1. 🤔 Why ? :](#11--why--)
-- [2. ⚙️ Plan:](#2-️-plan)
-- [3. 🚧 Progress :](#3--progress-)
-- [4. interface :](#4-interface-)
-- [5. Code :](#5-code-)
+- [2. :hammer: Creation :](#2-hammer-creation-)
+  - [2.1. 🤔 Why ? :](#21--why--)
+- [3. ⚙️ Plan:](#3-️-plan)
+- [4. 🚧 Progress :](#4--progress-)
+- [5. interface :](#5-interface-)
+- [6. Code :](#6-code-)
 
 
 # 1. 💠 Introduction :
@@ -25,10 +26,9 @@
         * server (if possible)
     * calls (highly doubt it due to its difficulty to implement)
 
->[!NOTE]
-> hi
+# 2. :hammer: Creation :
 
-## 1.1. 🤔 Why ? :
+## 2.1. 🤔 Why ? :
 
 - **Privacy :**
     - nowdays most of big companies chat applications **steal personal data/informations**
@@ -36,10 +36,10 @@
 
 - **Security :**
     - some chat applications may use **weak encryption method**, which would result in data being able to be **intercepted**
-    
+
 ---
 
-# 2. ⚙️ Plan:
+# 3. ⚙️ Plan:
 
 * Interface :
     - web browser
@@ -47,8 +47,8 @@
 
 ---
 
-# 3. 🚧 Progress :
+# 4. 🚧 Progress :
 
-# 4. interface :
+# 5. interface :
 
-# 5. Code :
+# 6. Code :
