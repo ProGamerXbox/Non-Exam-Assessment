@@ -51,3 +51,15 @@
 # 5. interface :
 
 # 6. Code :
+
+<details>
+<summary>Table</summary>
+
+- yes
+
+| hi  | j   | jii |
+| --- | --- | --- |
+| je  | ff  | ffe |
+
+
+</details>
