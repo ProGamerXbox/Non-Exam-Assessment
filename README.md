@@ -1,8 +1,5 @@
-> [!IMPORTANT]
+> [!IMPORTANTE]
 > Please note that it is the prototype version
-
-> [!SJSJS]
-> jsp
 
 # 🔰 Non-Exam-Assessment :
 
