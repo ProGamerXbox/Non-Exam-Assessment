@@ -3,7 +3,16 @@
 
 # 🔰 Non-Exam-Assessment :
 
-# 💠 Introduction :
+- [🔰 Non-Exam-Assessment :](#-non-exam-assessment-)
+- [1. 💠 Introduction :](#1--introduction-)
+  - [1.1. 🤔 Why ? :](#11--why--)
+- [2. ⚙️ Plan:](#2-️-plan)
+- [3. 🚧 Progress :](#3--progress-)
+- [4. interface :](#4-interface-)
+- [5. Code :](#5-code-)
+
+
+# 1. 💠 Introduction :
 
 * Creation of a **web-based** **`chatroom`** using **client/server** infrastructure and implementating features such as:
     * sending :
@@ -16,7 +25,10 @@
         * server (if possible)
     * calls (highly doubt it due to its difficulty to implement)
 
-## 🤔 Why ? :
+>[!NOTE]
+> hi
+
+## 1.1. 🤔 Why ? :
 
 - **Privacy :**
     - nowdays most of big companies chat applications **steal personal data/informations**
@@ -27,15 +39,16 @@
     
 ---
 
-# ⚙️ Plan:
+# 2. ⚙️ Plan:
 
 * Interface :
     - web browser
 
+
 ---
 
-# 🚧 Progress :
+# 3. 🚧 Progress :
 
-# interface :
+# 4. interface :
 
-# Code :
+# 5. Code :
