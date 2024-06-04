@@ -8,9 +8,11 @@
 - [2. :hammer: Creation :](#2-hammer-creation-)
   - [2.1. 🤔 Why ? :](#21--why--)
 - [3. ⚙️ Plan:](#3-️-plan)
+  - [3.1. interface :](#31-interface-)
+  - [3.2 Code :](#32-code-)
 - [4. 🚧 Progress :](#4--progress-)
-- [5. interface :](#5-interface-)
-- [6. Code :](#6-code-)
+  - [4.1 interface :](#41-interface-)
+  - [4.2 Code :](#42-code-)
 
 
 # 1. 💠 Introduction :
@@ -41,25 +43,16 @@
 
 # 3. ⚙️ Plan:
 
+## 3.1. interface :
 * Interface :
     - web browser
+
+## 3.2 Code :
 
 ---
 
 # 4. 🚧 Progress :
 
-# 5. interface :
+## 4.1 interface :
 
-# 6. Code :
-
-<details>
-<summary>Table</summary>
-
-- yes
-
-| hi  | j   | jii |
-| --- | --- | --- |
-| je  | ff  | ffe |
-
-
-</details>
+## 4.2 Code :
