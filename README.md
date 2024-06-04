@@ -30,6 +30,9 @@
 
 # 2. :hammer: Creation :
 
+> ### What problem does it solve ?
+> What is the point of creating this type of application ?
+
 ## 2.1. 🤔 Why ? :
 
 - **Privacy :**
