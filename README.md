@@ -1,6 +1,3 @@
-> [!IMPORTANT]
-> Please note that it is the PROTOTYPE VERSION
-
 # 🔰 Non-Exam-Assessment :
 
 - [🔰 Non-Exam-Assessment :](#-non-exam-assessment-)
