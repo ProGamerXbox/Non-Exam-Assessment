@@ -1,5 +1,5 @@
-> [!IMPORTANTE]
-> Please note that it is the prototype version
+> [!IMPORTANT]
+> Please note that it is the PROTOTYPE VERSION
 
 # 🔰 Non-Exam-Assessment :
 
