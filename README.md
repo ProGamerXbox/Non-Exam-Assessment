@@ -17,16 +17,14 @@
 - [2. :hammer: Creation :](#2-hammer-creation-)
   - [2.1. 🤔 Current problems ? :](#21--current-problems--)
   - [2.2. Goal of the project :](#22-goal-of-the-project-)
-- [Analysis](#analysis)
-- [Design](#design)
-- [3. ⚙️ Plan:](#3-️-plan)
-  - [3.1. interface :](#31-interface-)
-  - [3.2 Code :](#32-code-)
-- [4. 🚧 Progress :](#4--progress-)
-  - [4.1 interface :](#41-interface-)
-  - [4.2 Code :](#42-code-)
-- [Testing](#testing)
-- [Evaluation](#evaluation)
+- [3. :book: Analysis :](#3-book-analysis-)
+- [4. ⚙️ Design :](#4-️-design-)
+  - [4.1. interface :](#41-interface-)
+- [5. 🚧 Progress :](#5--progress-)
+  - [5.1 :moyai: interface :](#51-moyai-interface-)
+  - [5.2 :computer: Code :](#52-computer-code-)
+- [6. :test\_tube: Testing :](#6-test_tube-testing-)
+- [7. :pencil: Evaluation :](#7-pencil-evaluation-)
 
 
 # 1. 💠 Introduction :
@@ -110,26 +108,23 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 
 ---
 
-# Analysis
+# 3. :book: Analysis :
 
 - ask end user what thet think of the project
 
-# Design
+# 4. ⚙️ Design :
 
-# 3. ⚙️ Plan:
-
-## 3.1. interface :
+## 4.1. interface :
 
 * Interface :
     - web browser
 
-## 3.2 Code :
 
 ---
 
-# 4. 🚧 Progress :
+# 5. 🚧 Progress :
 
-## 4.1 interface :
+## 5.1 :moyai: interface :
 
 <details>
 <summary>Web Interface</summary>
@@ -142,7 +137,7 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 
 </details>
 
-## 4.2 Code :
+## 5.2 :computer: Code :
 
 <details>
 <summary>Core Features</summary>
@@ -151,10 +146,9 @@ The default port for the `chatroom` server is port : `80` (which is the default 
     - [ ] send/receive message
     - [ ] general chat
     - [ ] database
-    - [ ] 
-
+  
 </details>
 
-# Testing
+# 6. :test_tube: Testing :
 
-# Evaluation
+# 7. :pencil: Evaluation :
