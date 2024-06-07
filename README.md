@@ -16,7 +16,7 @@
     - [How to add a firewall rule on Windows](#how-to-add-a-firewall-rule-on-windows)
 - [2. :hammer: Creation :](#2-hammer-creation-)
   - [2.1. 🤔 Current problems ? :](#21--current-problems--)
-  - [🤔 Why ? :](#-why--)
+  - [Why ? :](#why--)
   - [2.2. Goal of the project :](#22-goal-of-the-project-)
 - [3. :book: Analysis :](#3-book-analysis-)
 - [4. ⚙️ Design :](#4-️-design-)
@@ -80,7 +80,7 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 > ### What problem does it solve ?
 > What is the point of creating this type of application ?
 ## 2.1. 🤔 Current problems ? :
-## 🤔 Why ? :
+## Why ? :
 
 - **Privacy :**
     - nowdays most of big companies chat applications **steal personal data/informations**
