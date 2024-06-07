@@ -96,7 +96,6 @@ The default port for the `chatroom` server is port : `80` (which is the default 
   - **open-source** script for anyone who wishes to host their own **`chatroom`** server and having full access to it
   - will be **customizable**
 
-
 ---
 
 # 3. :book: Analysis :
@@ -108,7 +107,6 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 ## 4.1. interface :
 * Interface :
     - web browser
-
 
 ---
 
