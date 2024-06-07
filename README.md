@@ -16,16 +16,11 @@
 - [3. :book: Analysis :](#3-book-analysis-)
 - [4. ⚙️ Design :](#4-️-design-)
   - [4.1. interface :](#41-interface-)
-- [⚙️ Plan:](#️-plan)
-  - [3.1. interface :](#31-interface-)
 - [5. 🚧 Progress :](#5--progress-)
-  - [5.1 :moyai: interface :](#51-moyai-interface-)
-  - [5.2 :computer: Code :](#52-computer-code-)
-- [🚧 Progress :](#-progress-)
+  - [5.1 interface :](#51-interface-)
+  - [5.2 Code :](#52-code-)
 - [6. :test\_tube: Testing :](#6-test_tube-testing-)
-- [interface :](#interface-)
 - [7. :pencil: Evaluation :](#7-pencil-evaluation-)
-- [Code](#code)
 
 
 # 1. 💠 Introduction :
@@ -111,9 +106,6 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 # 4. ⚙️ Design :
 
 ## 4.1. interface :
-# ⚙️ Plan:
-
-## 3.1. interface :
 * Interface :
     - web browser
 
@@ -122,7 +114,7 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 
 # 5. 🚧 Progress :
 
-## 5.1 :moyai: interface :
+## 5.1 interface :
 
 <details>
 <summary>Web Interface</summary>
@@ -135,7 +127,7 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 
 </details>
 
-## 5.2 :computer: Code :
+## 5.2 Code :
 
 <details>
 <summary>Core Features</summary>
@@ -147,10 +139,6 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 
 </details>
 
-# 🚧 Progress :
-
 # 6. :test_tube: Testing :
-# interface :
 
 # 7. :pencil: Evaluation :
-# Code
