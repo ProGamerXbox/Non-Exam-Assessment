@@ -7,7 +7,6 @@
 
 - [🔰 Non-Exam-Assessment :](#-non-exam-assessment-)
 - [1. 💠 Introduction :](#1--introduction-)
-- [💠 Introduction :](#-introduction-)
 - [:gift: Implementation :](#gift-implementation-)
   - [Installation :](#installation-)
   - [How to make it available online :](#how-to-make-it-available-online-)
@@ -35,14 +34,17 @@
 
 
 # 1. 💠 Introduction :
-# 💠 Introduction :
 
 * Creation of a **web-based** **`chatroom`** using **client/server** infrastructure and implementating features such as:
     * sending :
-@@ -40,115 +18,27 @@
+        * vocals (if possible)
+        * photos
+        * messages
+    * types of chats :
+        * private
+        * group
         * server (if possible)
     * calls (highly doubt it due to its difficulty to implement)
-
 ---
 
 # :gift: Implementation :
