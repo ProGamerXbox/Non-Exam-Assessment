@@ -1,7 +1,7 @@
 import asyncio, socket, threading
 
 host = '0.0.0.0'                                                      #LocalHost
-port = 8888                                                             #Choosing unreserved port
+port = 8889                                                             #Choosing unreserved port
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)              #socket initialization
 server.bind((host, port))                                               #binding host and port to socket
@@ -13,18 +13,19 @@ nicknames = []
 
 # Broadcast message to all clients
 def broadcast(message):
-    if len(str(message)) == 0:
-        client.send("[!] - You can't send empty messages".encode('utf-8'))
-    else:
-        for client in clients:
-            client.send(message)
+    for client in clients:
+        client.send(message)
 
 # Handle individual client connections
 def handle(client):
     while True:
         try:
             message = client.recv(1024)
-            broadcast(message)
+            decoded_message = message.decode('utf-8').strip()
+            if len(decoded_message) == 0:
+                client.send("[!] - You can't send empty messages".encode('utf-8'))
+            else:
+                broadcast(message)
         except:
             index = clients.index(client)
             clients.remove(client)

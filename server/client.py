@@ -5,7 +5,7 @@ import threading
 nickname = input("[*] - Choose your nickname: ")
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 8888))
+client.connect(('127.0.0.1', 8889))  # Ensure this matches the server port
 
 # Receive messages from the server
 def receive():
@@ -24,8 +24,11 @@ def receive():
 # Send messages to the server
 def write():
     while True:
-        message = f'{nickname}: {input("")}'
-        client.send(message.encode('utf-8'))
+        message = input('')
+        if message.strip():  # Ensure the message is not empty or whitespace
+            client.send(f'{nickname}: {message}'.encode('utf-8'))
+        else:
+            print("[!] - You can't send empty messages")
 
 receive_thread = threading.Thread(target=receive)
 receive_thread.start()
