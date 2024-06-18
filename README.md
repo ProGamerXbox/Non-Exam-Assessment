@@ -106,6 +106,8 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 
 # 3. :book: Analysis :
 
+[Ada computer Science ressources](https://adacomputerscience.org/concepts/projaqa_analysis?examBoard=aqa&stage=a_level)
+
 - ask end user what thet think of the project
 
 # 4. ⚙️ Design :
@@ -140,7 +142,10 @@ The default port for the `chatroom` server is port : `80` (which is the default 
 - [ ] Establish a connection
     - [ ] send/receive message
     - [ ] general chat
-    - [ ] database
+- [ ] database
+    - [ ] hashing
+- [ ] rules
+  - [ ] foribid empty messages
 
 </details>
 
