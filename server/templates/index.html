@@ -1,40 +1,41 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+</head>
+<body>
+    <h1 style="text-align: center">connection</h1>
 
-{% block head %}
-<title>Task Master</title>
-{% endblock %}
+    <h4 style="text-align: center">Create users yeay. Create one below!</h4>
 
-{% block body %}
-<div class="content">
-    <h1 style="text-align: center">Task Master</h1>
-    {% if tasks|length < 1 %}
-    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
-    {% else %}
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>  <!-- Display the error message -->
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>List of Users</h2>
     <table>
         <tr>
-            <th>Task</th>
-            <th>Added</th>
+            <th>Username</th>
+            <th>Password</th>
             <th>Actions</th>
         </tr>
-        {% for task in tasks %}
+        {% for user in users %}
             <tr>
-                <td>{{ task.content }}</td>
-                <td>{{ task.date_created.date() }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.password }}</td>  <!-- Show password (consider security) -->
                 <td>
-                    <a href="/delete/{{task.id}}">Delete</a>
-                    <br>
-                    <a href="/update/{{task.id}}">Update</a>
+                    <a href="/delete/{{ user.id }}">Delete</a>  <!-- Link to delete user -->
                 </td>
             </tr>
         {% endfor %}
     </table>
-    {% endif %}
-
-    <div class="form">
-        <form action="/" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Add Task">
-        </form>
-    </div>
-</div>
-{% endblock %}
+</body>
+</html>

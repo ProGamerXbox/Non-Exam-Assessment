@@ -6,39 +6,49 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 
-class Todo(db.Model):
+class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    content = db.Column(db.String(200), nullable=False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+    username = db.Column(db.String(80), nullable=False, unique=True)
+    password = db.Column(db.String(120), nullable=False)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)  # Add this field
+
 
     def __repr__(self):
-        return '<Task %r>' % self.id
+        return '<User %r>' % self.username
+
 
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        task_content = request.form['content']
-        new_task = Todo(content=task_content)
+        username = request.form['username']
+        password = request.form['password']
+
+        if not password:  # Check if the password is empty
+            error = "Password cannot be empty."
+            users = User.query.order_by(User.date_created).all()  # Reload the existing users
+            return render_template('index.html', users=users, error=error)
+
+        new_user = User(username=username, password=password)
 
         try:
-            db.session.add(new_task)
+            db.session.add(new_user)
             db.session.commit()
             return redirect('/')
         except:
-            return 'There was an issue adding your task'
+            return 'There was an issue adding the user (Could be that you have the same username as someone else)'
 
     else:
-        tasks = Todo.query.order_by(Todo.date_created).all()
-        return render_template('index.html', tasks=tasks)
+        users = User.query.order_by(User.date_created).all()  # Now works since date_created exists
+        return render_template('index.html', users=users)
 
 
 @app.route('/delete/<int:id>')
 def delete(id):
-    task_to_delete = Todo.query.get_or_404(id)
+    user_to_delete = User.query.get_or_404(id)
 
     try:
-        db.session.delete(task_to_delete)
+        db.session.delete(user_to_delete)
         db.session.commit()
         return redirect('/')
     except:
@@ -46,19 +56,19 @@ def delete(id):
 
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
-    task = Todo.query.get_or_404(id)
+    user = User.query.get_or_404(id)
 
     if request.method == 'POST':
-        task.content = request.form['content']
+        user.content = request.form['user']
 
         try:
             db.session.commit()
             return redirect('/')
         except:
-            return 'There was an issue updating your task'
+            return 'There was an issue updating your username'
 
     else:
-        return render_template('update.html', task=task)
+        return render_template('update.html', user=user)
 
 
 if __name__ == "__main__":

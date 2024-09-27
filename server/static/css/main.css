@@ -1,21 +1,33 @@
+/* General Styles */
 body, html {
     margin: 0;
     font-family: sans-serif;
     background-color: lightblue;
+    display: flex;               /* Use Flexbox for centering */
+    justify-content: center;     /* Center horizontally */
+    align-items: center;         /* Center vertically */
+    height: 100vh;              /* Full height of the viewport */
 }
 
 .content {
-    margin: 0 auto;
     width: 400px;
+    text-align: center;         /* Center text within the content */
+}
+
+/* Form Styles */
+.form {
+    margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;            /* Center the table */
 }
 
 table, td, th {
     border: 1px solid #aaa;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
 }
 
 th {
@@ -25,12 +37,4 @@ th {
 td {
     text-align: center;
     padding: 5px;
-}
-
-.form {
-    margin-top: 20px;
-}
-
-#content {
-    width: 70%;
 }
