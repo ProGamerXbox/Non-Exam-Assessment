@@ -26,8 +26,8 @@ def index():
 
         if not password:  # Check if the password is empty
             error = "Password cannot be empty."
-            users = User.query.order_by(User.date_created).all()  # Reload the existing users
-            return render_template('index.html', users=users, error=error)
+            data = User.query.order_by(User.date_created).all()  # Reload the existing users
+            return render_template('index.html', data=data, error=error)
 
         new_user = User(username=username, password=password)
 
@@ -39,8 +39,8 @@ def index():
             return 'There was an issue adding the user (Could be that you have the same username as someone else)'
 
     else:
-        users = User.query.order_by(User.date_created).all()  # Now works since date_created exists
-        return render_template('index.html', users=users)
+        data = User.query.order_by(User.date_created).all()  # Now works since date_created exists
+        return render_template('index.html', data=data)
 
 
 @app.route('/delete/<int:id>')
@@ -56,10 +56,10 @@ def delete(id):
 
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
-    user = User.query.get_or_404(id)
+    usererror = User.query.get_or_404(id)
 
     if request.method == 'POST':
-        user.content = request.form['user']
+        usererror.content = request.form['content']
 
         try:
             db.session.commit()
@@ -68,7 +68,7 @@ def update(id):
             return 'There was an issue updating your username'
 
     else:
-        return render_template('update.html', user=user)
+        return render_template('update.html', usererror=usererror)
 
 
 if __name__ == "__main__":
