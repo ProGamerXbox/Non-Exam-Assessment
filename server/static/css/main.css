@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     font-family: sans-serif;
-    background-color: lightblue;
+    background-color: red;
     display: flex;               /* Use Flexbox for centering */
     justify-content: center;     /* Center horizontally */
     align-items: center;         /* Center vertically */

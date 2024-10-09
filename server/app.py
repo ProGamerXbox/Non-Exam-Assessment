@@ -12,7 +12,6 @@ class User(db.Model):
     password = db.Column(db.String(120), nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)  # Add this field
 
-
     def __repr__(self):
         return '<User %r>' % self.username
 
@@ -21,15 +20,15 @@ class User(db.Model):
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+        username_register = request.form['username']
+        password_register = request.form['password']
 
-        if not password:  # Check if the password is empty
+        if not password_register:  # Check if the password is empty
             error = "Password cannot be empty."
             data = User.query.order_by(User.date_created).all()  # Reload the existing users
             return render_template('index.html', data=data, error=error)
 
-        new_user = User(username=username, password=password)
+        new_user = User(username=username_register, password=password_register)
 
         try:
             db.session.add(new_user)
@@ -41,7 +40,6 @@ def index():
     else:
         data = User.query.order_by(User.date_created).all()  # Now works since date_created exists
         return render_template('index.html', data=data)
-
 
 @app.route('/delete/<int:id>')
 def delete(id):

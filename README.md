@@ -145,9 +145,10 @@ The default port for the `chatroom` server is port : `80` (which is the default 
     - [ ] send/receive message
     - [ ] general chat
 - [ ] database
+    - [ ] create table
     - [ ] hashing
 - [ ] rules
-  - [ ] foribid empty messages
+  - [x] foribid empty messages
 
 </details>
 
