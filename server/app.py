@@ -6,7 +6,11 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 
+with app.app_context():
+    db.create_all()
+
 class User(db.Model):
+    __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), nullable=False, unique=True)
     password = db.Column(db.String(120), nullable=False)
@@ -41,6 +45,22 @@ def index():
         data = User.query.order_by(User.date_created).all()  # Now works since date_created exists
         return render_template('index.html', data=data)
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username_register']
+        password = request.form['password_register']
+
+        user = User.query.filter_by(username=username, password=password).first()
+        if user:
+            return redirect('/')
+        else:
+            error = "Invalid username or password"
+            return render_template('index.html', error=error)
+
+    return redirect('/')
+
+
 @app.route('/delete/<int:id>')
 def delete(id):
     user_to_delete = User.query.get_or_404(id)
@@ -54,19 +74,19 @@ def delete(id):
 
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
-    usererror = User.query.get_or_404(id)
+    user_to_update = User.query.get_or_404(id)
 
     if request.method == 'POST':
-        usererror.content = request.form['content']
+        user_to_update.username = request.form['username']  # Correctly update the username
 
         try:
             db.session.commit()
             return redirect('/')
         except:
-            return 'There was an issue updating your username'
+            return f'There was an issue updating your username'
 
     else:
-        return render_template('update.html', usererror=usererror)
+        return render_template('update.html', user=user_to_update)
 
 
 if __name__ == "__main__":
