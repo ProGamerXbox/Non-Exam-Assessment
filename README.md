@@ -5,7 +5,12 @@
 
 # 🔰 Non-Exam-Assessment :
 
+# Obelus
+
+name of the project : **Obelus** (it just sounds cool and gives me idea for the logo)
+
 - [🔰 Non-Exam-Assessment :](#-non-exam-assessment-)
+- [Obelus](#obelus)
 - [1. 💠 Introduction :](#1--introduction-)
 - [:gift: Implementation :](#gift-implementation-)
   - [Installation :](#installation-)

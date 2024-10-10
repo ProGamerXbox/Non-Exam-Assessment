@@ -1,32 +1,13 @@
-from flask import Flask, render_template, url_for, request, redirect
-from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
-import os, sys
+from flask import render_template, request, redirect
+from app import *
+from models import *
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-#print("Current working directory:", os.getcwd())
-
-base_dir = os.path.abspath(os.path.dirname(__file__))
-instance_path_relative = os.path.join(base_dir, 'instance')
-
-app = Flask(__name__, instance_path=instance_path_relative, instance_relative_config=True)
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(app.instance_path, 'data.db')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(app.instance_path, 'data.db')
-db = SQLAlchemy(app)
-
-#print("Database path:", os.path.join(app.instance_path, 'data.db'))
-
-class User(db.Model):
-    __tablename__ = 'user'
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), nullable=False, unique=True)
-    password = db.Column(db.String(120), nullable=False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)  # Add this field
-
-    def __repr__(self):
-        return '<User %r>' % self.username
-
-
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        # Process the form
+        return redirect('/')
+    return render_template('register.html')
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
@@ -55,8 +36,8 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = request.form['username_register']
-        password = request.form['password_register']
+        username = request.form['username']
+        password = request.form['password']
 
         user = User.query.filter_by(username=username, password=password).first()
         if user:
@@ -94,7 +75,3 @@ def update(id):
 
     else:
         return render_template('update.html', user=user_to_update)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
