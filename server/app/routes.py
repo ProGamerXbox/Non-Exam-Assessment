@@ -9,8 +9,17 @@ main = Blueprint('main', __name__)
 @main.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        # Process the form
-        return redirect('/')
+        username_register = request.form['username']
+        password_register = request.form['password']
+
+        new_user = User(username=username_register, password=password_register)
+
+        try:
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect('/')  # Redirect to the home page after registration
+        except:
+            return 'There was an issue adding the user'
     return render_template('register.html')
 
 @main.route('/', methods=['POST', 'GET'])
@@ -51,30 +60,3 @@ def login():
             return render_template('index.html', error=error)
 
     return redirect('/')
-
-@main.route('/delete/<int:id>')
-def delete(id):
-    user_to_delete = User.query.get_or_404(id)
-
-    try:
-        db.session.delete(user_to_delete)
-        db.session.commit()
-        return redirect('/')
-    except:
-        return 'There was a problem deleting that task'
-
-@main.route('/update/<int:id>', methods=['GET', 'POST'])
-def update(id):
-    user_to_update = User.query.get_or_404(id)
-
-    if request.method == 'POST':
-        user_to_update.username = request.form['username']  # Correctly update the username
-
-        try:
-            db.session.commit()
-            return redirect('/')
-        except:
-            return 'There was an issue updating your username'
-
-    else:
-        return render_template('update.html', user=user_to_update)
