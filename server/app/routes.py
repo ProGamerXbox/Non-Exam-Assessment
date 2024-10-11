@@ -1,15 +1,19 @@
 from flask import render_template, request, redirect
-from app import *
-from models import *
+from . import db  # Import the database instance
+from .models import User
+from flask import Blueprint
 
-@app.route('/register', methods=['GET', 'POST'])
+# Create a Blueprint for the app
+main = Blueprint('main', __name__)
+
+@main.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         # Process the form
         return redirect('/')
     return render_template('register.html')
 
-@app.route('/', methods=['POST', 'GET'])
+@main.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
         username_register = request.form['username']
@@ -33,7 +37,7 @@ def index():
         data = User.query.order_by(User.date_created).all()  # Now works since date_created exists
         return render_template('index.html', data=data)
 
-@app.route('/login', methods=['GET', 'POST'])
+@main.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -48,8 +52,7 @@ def login():
 
     return redirect('/')
 
-
-@app.route('/delete/<int:id>')
+@main.route('/delete/<int:id>')
 def delete(id):
     user_to_delete = User.query.get_or_404(id)
 
@@ -60,7 +63,7 @@ def delete(id):
     except:
         return 'There was a problem deleting that task'
 
-@app.route('/update/<int:id>', methods=['GET', 'POST'])
+@main.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
     user_to_update = User.query.get_or_404(id)
 
@@ -71,7 +74,7 @@ def update(id):
             db.session.commit()
             return redirect('/')
         except:
-            return f'There was an issue updating your username'
+            return 'There was an issue updating your username'
 
     else:
         return render_template('update.html', user=user_to_update)
